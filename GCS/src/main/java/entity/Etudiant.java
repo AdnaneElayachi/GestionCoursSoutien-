@@ -3,6 +3,8 @@ package entity;
 import jakarta.persistence.*;
 
 import java.util.Date;
+import java.util.List;
+
 @Entity
 
 public class Etudiant {
@@ -26,6 +28,5 @@ public class Etudiant {
 
     @Column(name = "jour_debut_ecole")
     private Date jourDebutEcole;
-
 
 }

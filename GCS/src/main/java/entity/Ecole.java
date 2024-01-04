@@ -1,6 +1,5 @@
 package entity;
 
-
 import jakarta.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -18,10 +17,22 @@ public class Ecole {
     @OneToMany(mappedBy = "ecole", cascade = {CascadeType.PERSIST, CascadeType.MERGE})
     private List<Division> divisions = new ArrayList<>();
 
-    @ManyToMany(mappedBy = "ecoles")
-    private List<Etudiant> etudiants;
+    @ManyToMany
+    @JoinTable(
+            name = "ecole_etudiant",
+            joinColumns = @JoinColumn(name = "ecole_id"),
+            inverseJoinColumns = @JoinColumn(name = "etudiant_id")
+    )
+    private List<Etudiant> etudiants = new ArrayList<>();
+
     @ManyToOne
-    @JoinColumn(name = "ecole_id")
-    private Ecole ecole;
+    @JoinColumn(name = "professeur_id")
+    private Professeur professeur;
+
+    @OneToMany(mappedBy = "ecole")
+    private List<Cours> cours = new ArrayList<>();
+
+
+
 
 }
