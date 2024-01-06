@@ -3,30 +3,22 @@ package entity;
 import jakarta.persistence.*;
 import lombok.*;
 
-import java.util.List;
-
 @Entity
 
-@Table(name = "Administration")
+@Table(name = "User")
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
 @Setter
 @ToString
-public class Administration {
+public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-
-    @OneToOne
-    @JoinColumn(name = "ecole_id")
-    private Ecole ecole;
-    @OneToMany
-    private List<User> userAdminstartion;
-
-
-
-
+    private String nom;
+    private String prenom;
+    private String fonction;
+    private String email;
 }

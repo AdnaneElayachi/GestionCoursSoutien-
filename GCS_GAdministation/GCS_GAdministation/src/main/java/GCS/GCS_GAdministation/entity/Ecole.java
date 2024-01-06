@@ -1,4 +1,4 @@
-package entity;
+package GCS.GCS_GAdministation.entity;
 
 import jakarta.persistence.*;
 import lombok.*;
@@ -32,14 +32,12 @@ public class Ecole {
             joinColumns = @JoinColumn(name = "ecole_id"),
             inverseJoinColumns = @JoinColumn(name = "etudiant_id")
     )
-    private List<Etudiant> etudiants = new ArrayList<>();
+
 
     @ManyToOne
     @JoinColumn(name = "professeur_id")
     private Professeur professeur;
 
-    @OneToMany(mappedBy = "ecole")
-    private List<Cours> cours = new ArrayList<>();
 
 
 

@@ -1,4 +1,4 @@
-package entity;
+package GCS.GCS_GAdministation.entity;
 
 import jakarta.persistence.*;
 import lombok.*;

@@ -1,11 +1,19 @@
 package entity;
 
 import jakarta.persistence.*;
+import lombok.*;
 
 import java.util.ArrayList;
 import java.util.List;
 
 @Entity
+
+@Table(name = "Division")
+@AllArgsConstructor
+@NoArgsConstructor
+@Getter
+@Setter
+@ToString
 public class Division {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

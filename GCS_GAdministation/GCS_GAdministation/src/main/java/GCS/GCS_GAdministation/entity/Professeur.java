@@ -1,4 +1,4 @@
-package entity;
+package GCS.GCS_GAdministation.entity;
 
 import jakarta.persistence.*;
 import lombok.*;
@@ -37,6 +37,4 @@ public class Professeur {
     @JoinColumn(name = "ecole_id")
     private Ecole ecole;
 
-    @OneToMany(mappedBy = "professeur")
-    private Cours cours;
 }
