@@ -24,11 +24,12 @@ public class Division {
 
 
     private String description;
-
-
-
-    @ManyToMany(mappedBy = "divisions", cascade = {CascadeType.PERSIST, CascadeType.MERGE})
-    private List<Etudiant> etudiants = new ArrayList<>();
+    @ManyToMany
+    @JoinTable(
+            name = "etudiant_division",
+            joinColumns = @JoinColumn(name = "etudiant_id"),
+            inverseJoinColumns = @JoinColumn(name = "division_id"))
+    private List<Division> divisions = new ArrayList<>();
 
 
     @OneToMany(mappedBy = "division", cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REMOVE})

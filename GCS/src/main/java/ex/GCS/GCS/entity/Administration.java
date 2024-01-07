@@ -21,7 +21,7 @@ public class Administration {
 
 
     @OneToMany
-    private List<User> userAdminstartion;
+    private List<Utilisateur> userAdminstartion;
 
 
 
