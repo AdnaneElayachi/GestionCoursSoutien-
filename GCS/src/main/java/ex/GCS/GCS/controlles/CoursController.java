@@ -15,15 +15,10 @@ import java.util.List;
 @RequestMapping("/api/Cours")
 public class CoursController {
 
-    private final EtudiantRepository etudiantRepository;
+    private  EtudiantRepository etudiantRepository;
 
-    @Autowired
-    public CoursController(EtudiantRepository etudiantRepository) {
+   /*blic CoursController(EtudiantRepository etudiantRepository) {
         this.etudiantRepository = etudiantRepository;
-    }
+    }*/
 
-    @GetMapping("/byCours/{cours}")
-    public List<Etudiant> findAllByCours(@PathVariable Cours cours) {
-        return etudiantRepository.findAllByCours(cours);
-    }
 }

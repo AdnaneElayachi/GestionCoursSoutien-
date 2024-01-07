@@ -11,8 +11,8 @@ import java.util.List;@RestController
 @RequestMapping("/api/Etudiants")
 public class EtudiantControllers {
 
-    private final EtudiantRepository etudiantRepository;
-    private final AbsenceService absenceService;
+    private  EtudiantRepository etudiantRepository;
+    private  AbsenceService absenceService;
 
     @Autowired
     public EtudiantControllers(EtudiantRepository etudiantRepository, AbsenceService absenceService) {
@@ -30,10 +30,6 @@ public class EtudiantControllers {
         return etudiantRepository.findAll();
     }
 
-    @GetMapping("/byDivision/{division}")
-    public List<Etudiant> findAllByDivision(@PathVariable Division division) {
-        return etudiantRepository.findAllByDivision(division);
-    }
 
     @PostMapping("/enregistrerAbsence")
     public void enregistrerAbsence(@RequestBody Etudiant etudiant, @RequestParam LocalDate date, @RequestParam String cours) {
