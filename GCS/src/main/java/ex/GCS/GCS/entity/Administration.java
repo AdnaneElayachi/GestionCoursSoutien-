@@ -1,4 +1,4 @@
-package GCS.GCS_GAdministation.entity;
+package ex.GCS.GCS.entity;
 
 import jakarta.persistence.*;
 import lombok.*;
@@ -19,7 +19,13 @@ public class Administration {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    private Integer ecole;
+
+    @OneToOne
+    @JoinColumn(name = "ecole_id")
+    private Ecole ecole;
+    @OneToMany
+    private List<User> userAdminstartion;
+
 
 
 

@@ -6,6 +6,8 @@
       <list>
         <option value="$PROJECT_DIR$/GCS/pom.xml" />
         <option value="$PROJECT_DIR$/GCS_GAdministation/GCS_GAdministation/pom.xml" />
+        <option value="$PROJECT_DIR$/GCS_Eureka_Server/GCS_Eureka_Server/pom.xml" />
+        <option value="$PROJECT_DIR$/GCS_GateWay/GCS_GateWay/pom.xml" />
       </list>
     </option>
     <option name="workspaceImportForciblyTurnedOn" value="true" />
