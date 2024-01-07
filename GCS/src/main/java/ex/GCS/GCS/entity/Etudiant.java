@@ -45,4 +45,7 @@ public class Etudiant {
             inverseJoinColumns = @JoinColumn(name = "ecole_id")
     )
     private List<Division> division = new ArrayList<>();
+
+    public void setId(Long etudiantId) {
+    }
 }

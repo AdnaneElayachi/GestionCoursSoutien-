@@ -7,7 +7,7 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface UtilisateurRepository extends JpaRepository<Utilisateur, Long> {
 
-    Utilisateur findByFonction(String fonction);  // Correction ici
+    Utilisateur findByFonction(String fonction);
 
     boolean existsByEmail(String email);
 

@@ -34,5 +34,5 @@ public class Professeur {
 
 
     @OneToMany(mappedBy = "professeur")
-    private List<Cours> cours;  // Correction : Utiliser List<Cours> à la place de Cours
+    private List<Cours> cours;
 }

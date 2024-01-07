@@ -1,6 +1,8 @@
 package ex.GCS.GCS.controllers;
 
+import ex.GCS.GCS.entity.Division;
 import ex.GCS.GCS.entity.Professeur;
+import ex.GCS.GCS.repository.ProfesseurRepository;
 import ex.GCS.GCS.services.ProfesseurService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -11,7 +13,9 @@ import java.util.List;
 @RequestMapping("/api/professeurs")
 public class ProfesseurController {
 
-    private final ProfesseurService professeurService;
+    private  ProfesseurService professeurService;
+    private ProfesseurRepository professeurRepository;
+
 
     @Autowired
     public ProfesseurController(ProfesseurService professeurService) {
@@ -26,6 +30,11 @@ public class ProfesseurController {
     @GetMapping("/{id}")
     public Professeur getProfesseurById(@PathVariable Integer id) {
         return professeurService.getProfesseurById(id);
+    }
+
+    @GetMapping("/findAllByDivision")
+    public List<Professeur> findAllBySchool(@RequestBody Division division) {
+        return professeurRepository.findAllByDivision(division);
     }
 
 }

@@ -35,7 +35,8 @@ public class AdministrationController {
         return (List<Utilisateur>) userRepository.findByFonction(fonction);
     }
 
-    @PostMapping
+    @PostMapping("/save")
+
     public void save(@RequestBody Utilisateur user) {
         userRepository.save(user);
     }

@@ -15,10 +15,6 @@ import java.util.List;
 @RequestMapping("/api/Cours")
 public class CoursController {
 
-    private  EtudiantRepository etudiantRepository;
 
-   /*blic CoursController(EtudiantRepository etudiantRepository) {
-        this.etudiantRepository = etudiantRepository;
-    }*/
 
 }

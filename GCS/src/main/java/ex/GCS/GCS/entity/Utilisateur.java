@@ -26,4 +26,6 @@ public class Utilisateur {
 
     @Column(nullable = false, unique = true)
     private String email;
+    private  String MotDePasse;
+
 }
