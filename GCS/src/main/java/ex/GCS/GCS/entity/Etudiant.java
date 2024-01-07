@@ -26,8 +26,7 @@ public class Etudiant {
 
     private Integer genre;
 
-    @Column(name = "id_classe")
-    private Integer idClasse;
+    private String niveau;
 
     private String nationalite;
 
