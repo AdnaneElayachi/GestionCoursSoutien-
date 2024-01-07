@@ -22,14 +22,6 @@ public class DivisionController {
     public DivisionController(DivisionRepository divisionRepository) {
         this.divisionRepository = divisionRepository;
     }
-
-    @GetMapping("/byCours")
-    public List<Division> findAllByCours(@RequestParam Long coursId) {
-        Cours cours = new Cours();
-        cours.setId(Math.toIntExact(coursId));
-        return divisionRepository.findAllByCours(cours);
-    }
-
     @GetMapping("/byEtudiant")
     public List<Division> findAllByEtudiant(@RequestParam Long etudiantId) {
         Etudiant etudiant = new Etudiant();

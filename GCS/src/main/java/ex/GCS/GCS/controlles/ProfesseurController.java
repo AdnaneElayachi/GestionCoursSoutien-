@@ -33,8 +33,8 @@ public class ProfesseurController {
     }
 
     @GetMapping("/findAllByDivision")
-    public List<Professeur> findAllBySchool(@RequestBody Division division) {
-        return professeurRepository.findAllByDivision(division);
+    public List<Professeur> findAllBySpecialite(@RequestBody String  specialite) {
+        return professeurRepository.findAllBySpecialite(specialite);
     }
 
 }
