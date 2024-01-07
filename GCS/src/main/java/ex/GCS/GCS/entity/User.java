@@ -5,12 +5,12 @@ import lombok.*;
 
 @Entity
 
-@Table(name = "User")
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
 @Setter
 @ToString
+@Table(name = "utilisateur")
 public class User {
 
     @Id

@@ -7,7 +7,6 @@ import java.util.List;
 
 @Entity
 
-@Table(name = "Administration")
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
@@ -20,9 +19,7 @@ public class Administration {
     private Integer id;
 
 
-    @OneToOne
-    @JoinColumn(name = "ecole_id")
-    private Ecole ecole;
+
     @OneToMany
     private List<User> userAdminstartion;
 

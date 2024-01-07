@@ -4,11 +4,11 @@ import ex.GCS.GCS.entity.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface UserRepository extends JpaRepository<User, Long> {
-    User findOneByUsername(String nom);
+    User findOneByUsername(String username);
 
-    User findOneByEmail(String nom);
+    User findOneByEmail(String email);
 
     boolean existsByEmail(String email);
 
-    boolean existsByUsername(String nom);
+    boolean existsByUsername(String username);
 }

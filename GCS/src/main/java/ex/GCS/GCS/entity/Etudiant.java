@@ -3,11 +3,12 @@ package ex.GCS.GCS.entity;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
 @Entity
-@Table(name = "Etudiant")
+
 
 @AllArgsConstructor
 @NoArgsConstructor
@@ -37,5 +38,11 @@ public class Etudiant {
 
     @Column(name = "jour_debut_ecole")
     private Date jourDebutEcole;
-
+    @ManyToMany
+    @JoinTable(
+            name = "ecole_etudiant",
+            joinColumns = @JoinColumn(name = "etudiant_id"),
+            inverseJoinColumns = @JoinColumn(name = "ecole_id")
+    )
+    private List<Division> divisions = new ArrayList<>();
 }

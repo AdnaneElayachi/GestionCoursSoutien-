@@ -4,15 +4,14 @@ import jakarta.persistence.*;
 import lombok.*;
 
 import java.util.Date;
+import java.util.List;
 
 @Entity
-@Table(name = "Professeur")
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
 @Setter
 @ToString
-@Builder
 public class Professeur {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -33,10 +32,7 @@ public class Professeur {
     @Column(name = "specialite")
     private String specialite;
 
-    @ManyToOne
-    @JoinColumn(name = "ecole_id")
-    private Ecole ecole;
 
     @OneToMany(mappedBy = "professeur")
-    private Cours cours;
+    private List<Cours> cours;  // Correction : Utiliser List<Cours> à la place de Cours
 }
