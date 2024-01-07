@@ -1,5 +1,6 @@
 package GCS.GCS_GAdministation.entity;
 
+import ex.GCS.GCS.entity.User;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -21,6 +22,8 @@ public class Administration {
 
     private Integer ecole;
 
+
+    private String userAdminstartion;
 
 
 }

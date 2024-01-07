@@ -2,12 +2,14 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="GCS_Eureka_Server" />
         <module name="GCS_GateWay" />
+        <module name="GCS_Etudiant" />
         <module name="GCS" />
         <module name="GCS_GAdministation" />
       </profile>
@@ -16,6 +18,7 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="GCS" options="-parameters" />
+      <module name="GCS_Etudiant" options="-parameters" />
       <module name="GCS_Eureka_Server" options="-parameters" />
       <module name="GCS_GAdministation" options="-parameters" />
       <module name="GCS_GateWay" options="-parameters" />

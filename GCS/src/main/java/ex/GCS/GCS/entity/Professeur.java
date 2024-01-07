@@ -30,8 +30,8 @@ public class Professeur {
     @Column(name = "mot_de_passe")
     private String motDePasse;
 
-    @Column(name = "sel")
-    private String sel;
+    @Column(name = "specialite")
+    private String specialite;
 
     @ManyToOne
     @JoinColumn(name = "ecole_id")

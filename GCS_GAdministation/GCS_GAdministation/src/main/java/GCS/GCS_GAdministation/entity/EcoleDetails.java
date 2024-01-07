@@ -16,8 +16,6 @@ public class EcoleDetails {
 
     private String type;
 
-    @OneToMany(mappedBy = "ecole", cascade = {CascadeType.PERSIST, CascadeType.MERGE})
-    private List<Division> divisions = new ArrayList<>();
 
     @ManyToMany
     @JoinTable(

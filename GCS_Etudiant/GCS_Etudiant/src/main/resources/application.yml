@@ -1,13 +1,14 @@
 server:
-  port: 8081
+  port: 8001
 
 spring:
+
   application:
-    name : GAdministation
+    name : GCS_Etudiant
   datasource:
-    url: jdbc:postgresql://localhost:5432/GCS_GAdministation
-    username: "postgres"
-    password: "post123456"
+    url: jdbc:postgresql://localhost:5432/GCS_Etudiant
+    username: postgres
+    password: post123456
     driver-class-name: org.postgresql.Driver
   jpa:
     properties:

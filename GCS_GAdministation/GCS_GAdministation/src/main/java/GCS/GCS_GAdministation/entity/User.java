@@ -3,23 +3,22 @@ package GCS.GCS_GAdministation.entity;
 import jakarta.persistence.*;
 import lombok.*;
 
-import java.util.ArrayList;
-import java.util.List;
-
 @Entity
-@Table(name = "Ecole")
+
+@Table(name = "User")
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
 @Setter
 @ToString
-public class Ecole {
+public class User {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Integer id;
 
-    private String name;
-    private String type;
-
-    private Integer professeur;
+    private String nom;
+    private String prenom;
+    private String fonction;
+    private String email;
 }

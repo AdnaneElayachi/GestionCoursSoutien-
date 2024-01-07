@@ -1,7 +1,10 @@
 package GCS.GCS_GAdministation.entity;
 
+import ex.GCS.GCS.entity.User;
 import jakarta.persistence.*;
 import lombok.*;
+
+import java.util.List;
 
 @Table(name = "AdministrationDetails")
 @AllArgsConstructor
@@ -17,4 +20,6 @@ public class AdministrationDetails {
     @OneToOne
     @JoinColumn(name = "ecole_id")
     private  Ecole ecole;
+    @OneToMany
+    private List<User> userAdminstartion;
 }
